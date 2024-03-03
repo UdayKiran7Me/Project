@@ -283,3 +283,27 @@ a:hover:after {
         object-fit: fill;
     }
 }
+
+@media (max-width: 920px) {
+    body::before {
+        content: "";
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        clip-path: circle(1% at 100% 100%) !important;
+    }
+    body::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        clip-path: circle(1% at 0% 0%) !important;
+        z-index: -2;
+    }
+}
