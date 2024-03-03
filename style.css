@@ -1,0 +1,285 @@
+.positive {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: white;
+    display: none;
+}
+
+.negative {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    color: white;
+    display: none;
+}
+
+li {
+    margin-top: 10px;
+    font-size: large;
+}
+
+body::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    clip-path: circle(40% at 100% 50%) !important;
+}
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    clip-path: circle(40% at 0% 50%) !important;
+    z-index: -2;
+}
+
+.head {
+    margin-top: 0px;
+    text-align: center;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1S;
+}
+
+form:hover .head{
+    color: rgb(255, 0, 152, 1);
+}
+
+input[type=text] {
+    background-color: white;
+    color: #151618;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+form:hover input[type=text] {
+    background-color: #00072f;
+    color: #c5b8b8;
+}
+
+h1 {
+    /* color: #7fcdcd; */
+    color: rgba(122, 0, 255, 1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form {
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(64, 98, 116, 0.25) !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:fill ;
+  z-index: -2;
+}
+
+a {
+    position: relative;
+    width: 160px;
+    height: 40px;
+    background: #00072f !important;
+    text-align: center !important;
+    line-height: 40px !important;
+    border-radius: 40px;
+    color: #555 !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: 3s;
+    overflow: hidden;
+    z-index: -2 !important;
+}
+
+form:hover a {
+    color: #fff !important;
+    box-shadow: -15px 0 50px rgba(255, 20, 152, 1), 15px 0 50px rgba(122, 0, 255, 1) !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(255, 255, 255, 0.5);
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(022, 20, 152, 0) !important;
+    filter: blur(4px) !important;
+    transition: 3s ;
+    z-index: -1 !important;
+}
+a:hover:before {
+    background: rgba(255, 20, 152, 1) !important;
+    transform: scaleX(5) !important;
+}
+
+
+a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(122, 0, 255, 0) !important;
+    filter: blur(4px) !important;
+    transition: 3s ;
+    z-index: -1 !important;
+    mix-blend-mode: lighten !important;
+}
+a:hover:after {
+    background: rgba(122, 0, 255, 1) !important;
+    transform: scaleX(5) !important;
+}
+
+/* .btn {
+    border-radius: 20px !important;
+    transition-property: background-color, color;
+    transition-duration: .25s !important;
+    transition-timing-function: ease-in-out;
+
+}
+
+.btn:hover {
+    background-color: #ea4 !important;
+    color: black !important;
+}
+
+.btn:active {
+    border: 1px solid orange !important;
+    color: orange !important;
+} */
+
+
+/* Special CSS for mobile view using keyframes */
+
+@media (max-width: 1024px) and (min-width: 912px) {
+    h1 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50,-50%);
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@media (max-width: 912px) and (min-width: 821px) {
+    form {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+    }
+    h1 {
+        position: absolute;
+        top: 35%;
+        left: 53%;
+        transform: translate(-50,-50%);
+    }
+}
+
+@media (max-width: 820px) and (min-width: 767px) {
+    form {
+        position: absolute;
+        top: 35%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+    }
+    h1 {
+        font-size: xx-small;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 541px) {
+    h1 {
+        color: blue;
+        position: absolute;
+        top: 23%;
+    }
+    form {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        transform: translate(-50%,-50%);
+    }
+}
+@media (max-width: 540px) and (min-width: 444px){
+    form {
+        position: absolute;
+        top: 30%;
+        left: 10%;    
+        transform: translate(-50%,-50%);
+    }
+    h1 {
+        position: absolute;
+        top: 20%;
+        left:40%;
+        transform: translate(-50%,-50%);
+    }
+    body::before {
+        clip-path: circle(1% at 100% 50%);
+    }
+}
+@media (max-width: 444px) {
+    h1 {
+        color: green;
+        display: none;
+    }
+    form {
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        width: 100%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        margin: 1%;
+    }
+    body {
+        background: url("mobile-bg.mp4");
+        object-fit: fill;
+    }
+}
