@@ -13,7 +13,8 @@
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
   </head>
   <body>
-    <video src="bg-video.mp4" class="bgvideo" autoplay muted loop>Video not Supported</video>
+    <video src="mobile-bg.mp4" class="mobile-bg" id="bg" autoplay muted loop>Background Video not supported in Mobile view</video>
+    <video src="bg-video.mp4" class="bgvideo" id="bg" autoplay muted loop>Video not Supported</video>
     <div class="positive">
       <h2>Positive</h2>
       <li>One</li>
@@ -25,7 +26,7 @@
     <div class="container">
       <h1>Phishing URL Checking </h1>
       <form action="" class="frm">
-        <h2 class="head">Check URL</h2>
+        <!-- <h2 class="head">Check URL</h2> -->
         <div class="form-group mb-4" style="--clr:#0f0">
             <!-- <label for="">Enter URL</label> -->
             <input type="text"
@@ -58,7 +59,27 @@
 		max: 15,
 		speed: 400
 	});
-    </script>
+
+    // window.onload = (event) => { myFunction( event ) };
+    
+    // function myFunction( event ) 
+    // {
+    //   // alert("Screen Width is: " + screen.width);
+      
+    //   let myvid = document.getElementById("bg");
+      
+    //   //# if BIGGER THAN the 520 pixels
+    //   if ( screen.width > 520 ) { myvid.src = "bg-video.mp4"; }
+      
+    //   //# if SMALLER THAN or EQUAL-TO the 520 pixels
+    //   if ( screen.width <= 520 ) { myvid.src = "mobile-bg.mp4"; }
+      
+    //   //# load URL (for playback)
+    //   myvid.load();
+      
+    // }
+      
+      </script>
   </body>
 </html>
 
